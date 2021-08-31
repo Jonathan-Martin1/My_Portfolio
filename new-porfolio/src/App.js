@@ -1,3 +1,5 @@
+import './App.scss';
+
 import React from 'react';
 
 import {
@@ -13,8 +15,8 @@ import {
 function App() {
 	return (
 		<MDBContainer fluid>
-			<div class='row'>
-				<div class='col-md-8' style={{ width: '100%' }}>
+			<div className='row'>
+				<div className='col-md-8' style={{ width: '100%' }}>
 					<header>
 						<MDBNavbar expand='lg' light bgColor='white'>
 							<MDBContainer fluid>
@@ -54,9 +56,9 @@ function App() {
 					</header>
 				</div>
 			</div>
-			<div class='row'>
-				<div class='col-6'>.col-6</div>
-				<div class='col-6'>.col-6</div>
+			<div className='row'>
+				<div className='col-6'>.col-6</div>
+				<div className='col-6'>.col-6</div>
 			</div>
 		</MDBContainer>
 	);
