@@ -32,13 +32,13 @@ function App() {
 											</MDBNavbarLink>
 										</MDBNavbarItem>
 										<MDBNavbarItem>
-											<MDBNavbarLink href='#'>Features</MDBNavbarLink>
-										</MDBNavbarItem>
-										<MDBNavbarItem>
-											<MDBNavbarLink href='#'>Pricing</MDBNavbarLink>
+											<MDBNavbarLink href='#'>Projects</MDBNavbarLink>
 										</MDBNavbarItem>
 										<MDBNavbarItem>
 											<MDBNavbarLink href='#'>About</MDBNavbarLink>
+										</MDBNavbarItem>
+										<MDBNavbarItem>
+											<MDBNavbarLink href='#'>Contact</MDBNavbarLink>
 										</MDBNavbarItem>
 									</MDBNavbarNav>
 								</div>
