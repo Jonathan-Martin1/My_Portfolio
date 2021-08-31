@@ -14,7 +14,7 @@ function App() {
 	return (
 		<MDBContainer fluid>
 			<div class='row'>
-				<div class='col-md-8'>
+				<div class='col-md-8' style={{ width: '100%' }}>
 					<header>
 						<MDBNavbar expand='lg' light bgColor='white'>
 							<MDBContainer fluid>
@@ -53,12 +53,6 @@ function App() {
 						</div>
 					</header>
 				</div>
-				<div class='col-6 col-md-4'>.col-6 .col-md-4</div>
-			</div>
-			<div class='row'>
-				<div class='col-6 col-md-4'>.col-6 .col-md-4</div>
-				<div class='col-6 col-md-4'>.col-6 .col-md-4</div>
-				<div class='col-6 col-md-4'>.col-6 .col-md-4</div>
 			</div>
 			<div class='row'>
 				<div class='col-6'>.col-6</div>
