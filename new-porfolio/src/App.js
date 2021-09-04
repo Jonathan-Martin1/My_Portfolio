@@ -39,8 +39,15 @@ function App() {
 				<div className='row'>
 					<div className='col-md-8' style={{ width: '100%' }}>
 						<header>
-							<MDBNavbar expand='lg' dark bgColor='grey'>
-								<MDBContainer fluid>
+							<Navbar
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									border: 'bottom',
+									bg: 'transparent',
+									expand: 'lg',
+								}}>
+								<MDBNavbar expand='lg' dark bgColor='grey'>
 									<Navbar.Toggle
 										className='border-0'
 										aria-controls='navbar-toggle'
@@ -57,32 +64,32 @@ function App() {
 											}}>
 											<Button
 												className='mx-1'
-												variant='outline-dark'
+												variant='outline-light'
 												style={{ boxShadow: '2px 2px grey' }}>
 												<Link to='/'>Home</Link>
 											</Button>
 											<Button
 												className='mx-1'
-												variant='outline-dark'
+												variant='outline-light'
 												style={{ boxShadow: '2px 2px grey' }}>
 												<Link to='/projects'>Projects</Link>
 											</Button>
 											<Button
 												className='mx-1'
-												variant='outline-dark'
+												variant='outline-light'
 												style={{ boxShadow: '2px 2px grey' }}>
 												<Link to='/about'>About</Link>
 											</Button>
 											<Button
 												className='mx-1'
-												variant='outline-dark'
+												variant='outline-light'
 												style={{ boxShadow: '2px 2px grey' }}>
 												<Link to='/contact'>Contact</Link>
 											</Button>
 										</Nav>
 									</NavbarCollapse>
-								</MDBContainer>
-							</MDBNavbar>
+								</MDBNavbar>
+							</Navbar>
 						</header>
 					</div>
 				</div>
