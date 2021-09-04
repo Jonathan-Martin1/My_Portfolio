@@ -1,68 +1,104 @@
 import './App.scss';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   MDBContainer,
-  MDBIcon,
   MDBNavbar,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarNav,
-  MDBNavbarToggler,
 } from 'mdb-react-ui-kit';
+import {
+  Button,
+  Container,
+  Nav,
+  Navbar,
+} from 'react-bootstrap';
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import {
+  Link,
+  Route,
+  Switch,
+} from 'react-router-dom';
+
+import HomeContent from './components/homeContent';
 
 function App() {
+	const [useToggle, setUseToggle] = useState(false);
+
+	const toggleClick = (event) => {
+		event.preventDefault();
+		if (event) {
+			setUseToggle(true);
+		} else {
+			setUseToggle(false);
+		}
+	};
+
 	return (
-		<MDBContainer fluid>
-			<div className='row'>
-				<div className='col-md-8' style={{ width: '100%' }}>
-					<header>
-						<MDBNavbar expand='lg' light bgColor='white'>
-							<MDBContainer fluid>
-								<MDBNavbarToggler
-									aria-controls='navbarExample01'
-									aria-expanded='false'
-									aria-label='Toggle navigation'>
-									<MDBIcon fas icon='bars' />
-								</MDBNavbarToggler>
-								<div className='collapse navbar-collapse' id='navbarExample01'>
-									<MDBNavbarNav right className='mb-2 mb-lg-0'>
-										<MDBNavbarItem active>
-											<MDBNavbarLink aria-current='page' href='/'>
-												Home
-											</MDBNavbarLink>
-										</MDBNavbarItem>
-										<MDBNavbarItem>
-											<MDBNavbarLink href='/projects'>Projects</MDBNavbarLink>
-										</MDBNavbarItem>
-										<MDBNavbarItem>
-											<MDBNavbarLink href='/about'>About</MDBNavbarLink>
-										</MDBNavbarItem>
-										<MDBNavbarItem>
-											<MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
-										</MDBNavbarItem>
-									</MDBNavbarNav>
-								</div>
-							</MDBContainer>
-						</MDBNavbar>
-						<div className='p-5 text-center bg-light'>
-							<h1 className='mb-3'>Keep Pushing Forward</h1>
-							<h4 className='mb-3'>
-								No matter what lies ahead, I will keep going
-							</h4>
-							<a className='btn btn-primary' href='/contact' role='button'>
-								Contact Me
-							</a>
-						</div>
-					</header>
+		<Container>
+			<MDBContainer fluid>
+				<div className='row'>
+					<div className='col-md-8' style={{ width: '100%' }}>
+						<header>
+							<MDBNavbar expand='lg' dark bgColor='grey'>
+								<MDBContainer fluid>
+									<Navbar.Toggle
+										className='border-0'
+										aria-controls='navbar-toggle'
+									/>
+									<NavbarCollapse
+										id='navbar-toggle'
+										style={{
+											justifyContent: 'flex-end',
+										}}>
+										<Nav
+											style={{
+												margin: 'auto',
+												color: 'black',
+											}}>
+											<Button
+												className='mx-1'
+												variant='outline-dark'
+												style={{ boxShadow: '2px 2px grey' }}>
+												<Link to='/'>Home</Link>
+											</Button>
+											<Button
+												className='mx-1'
+												variant='outline-dark'
+												style={{ boxShadow: '2px 2px grey' }}>
+												<Link to='/projects'>Projects</Link>
+											</Button>
+											<Button
+												className='mx-1'
+												variant='outline-dark'
+												style={{ boxShadow: '2px 2px grey' }}>
+												<Link to='/about'>About</Link>
+											</Button>
+											<Button
+												className='mx-1'
+												variant='outline-dark'
+												style={{ boxShadow: '2px 2px grey' }}>
+												<Link to='/contact'>Contact</Link>
+											</Button>
+										</Nav>
+									</NavbarCollapse>
+								</MDBContainer>
+							</MDBNavbar>
+						</header>
+					</div>
 				</div>
-			</div>
-			<div className='row'>
-				<div className='col-6'>.col-6</div>
-				<div className='col-6'>.col-6</div>
-			</div>
-		</MDBContainer>
+			</MDBContainer>
+			<Switch>
+				<Route exact={true} path='/'>
+					<HomeContent />
+				</Route>
+				<Route path='/projects'></Route>
+				<Route path='/about'></Route>
+				<Route path='/contact'></Route>
+				<Route>
+					<h1>404 Not Found</h1>
+				</Route>
+			</Switch>
+		</Container>
 	);
 }
 
