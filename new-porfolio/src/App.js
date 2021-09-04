@@ -29,28 +29,30 @@ function App() {
 								<div className='collapse navbar-collapse' id='navbarExample01'>
 									<MDBNavbarNav right className='mb-2 mb-lg-0'>
 										<MDBNavbarItem active>
-											<MDBNavbarLink aria-current='page' href='#'>
+											<MDBNavbarLink aria-current='page' href='/'>
 												Home
 											</MDBNavbarLink>
 										</MDBNavbarItem>
 										<MDBNavbarItem>
-											<MDBNavbarLink href='#'>Projects</MDBNavbarLink>
+											<MDBNavbarLink href='/projects'>Projects</MDBNavbarLink>
 										</MDBNavbarItem>
 										<MDBNavbarItem>
-											<MDBNavbarLink href='#'>About</MDBNavbarLink>
+											<MDBNavbarLink href='/about'>About</MDBNavbarLink>
 										</MDBNavbarItem>
 										<MDBNavbarItem>
-											<MDBNavbarLink href='#'>Contact</MDBNavbarLink>
+											<MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
 										</MDBNavbarItem>
 									</MDBNavbarNav>
 								</div>
 							</MDBContainer>
 						</MDBNavbar>
 						<div className='p-5 text-center bg-light'>
-							<h1 className='mb-3'>Heading</h1>
-							<h4 className='mb-3'>Subheading</h4>
-							<a className='btn btn-primary' href='' role='button'>
-								Call to action
+							<h1 className='mb-3'>Keep Pushing Forward</h1>
+							<h4 className='mb-3'>
+								No matter what lies ahead, I will keep going
+							</h4>
+							<a className='btn btn-primary' href='/contact' role='button'>
+								Contact Me
 							</a>
 						</div>
 					</header>
