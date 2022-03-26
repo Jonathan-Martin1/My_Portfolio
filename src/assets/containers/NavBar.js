@@ -1,61 +1,61 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 // https://react-bootstrap.github.io/components/navbar/
-import { Form, Nav, Navbar } from 'react-bootstrap'
+import { Form, Nav, Navbar } from "react-bootstrap";
 // https://www.npmjs.com/package/react-scroll
-import { Link } from 'react-scroll'
+import { Link } from "react-scroll";
 // https://react-icons.github.io/react-icons/
-import { RiMoonClearFill, RiSunLine } from 'react-icons/ri'
+import { RiMoonClearFill, RiSunLine } from "react-icons/ri";
 
 // Image
-import logo from '../images/logo.svg'
+import logo from "../images/logo.svg";
 
 const NavBar = ({ theme, setTheme }) => {
-  const [expanded, setExpanded] = useState(false)
-  const [themeLogo, setThemeLogo] = useState(<RiMoonClearFill />)
+  const [expanded, setExpanded] = useState(false);
+  const [themeLogo, setThemeLogo] = useState(<RiMoonClearFill />);
 
   const updateTheme = () => {
-    theme === 'dark' ? setTheme('light') : setTheme('dark')
+    theme === "dark" ? setTheme("light") : setTheme("dark");
     setTimeout(() => {
-      setExpanded(false)
-    }, 500)
-  }
+      setExpanded(false);
+    }, 500);
+  };
 
   useEffect(() => {
-    theme === 'dark'
+    theme === "dark"
       ? setThemeLogo(<RiMoonClearFill />)
-      : setThemeLogo(<RiSunLine />)
-  }, [theme])
+      : setThemeLogo(<RiSunLine />);
+  }, [theme]);
 
   return (
     <Navbar
       className={theme}
-      bg='dark'
-      variant='dark'
-      fixed='top'
-      expand='lg'
+      bg="dark"
+      variant="dark"
+      fixed="top"
+      expand="lg"
       expanded={expanded}
     >
-      <Navbar.Brand href='#home'>
+      <Navbar.Brand href="#home">
         <img
-          className='d-inline-block align-top'
-          alt='React Logo'
+          className="d-inline-block align-top"
+          alt="React Logo"
           src={logo}
-          width='45'
-          height='45'
+          width="45"
+          height="45"
         />
       </Navbar.Brand>
       <Navbar.Toggle
-        aria-controls='basic-navbar-nav'
+        aria-controls="basic-navbar-nav"
         // Set the expanded state with the toggle button
         onClick={() => setExpanded(expanded ? false : true)}
       />
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav className='h4'>
-          <Nav.Item className='mr-3'>
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="h4">
+          <Nav.Item className="mr-3">
             <Link
-              className='text-white'
-              activeClass='active'
-              to='about'
+              className="text-white"
+              activeClass="active"
+              to="about"
               spy={true}
               smooth={true}
               duration={750}
@@ -63,18 +63,18 @@ const NavBar = ({ theme, setTheme }) => {
               // Handle collapse on select
               onClick={() =>
                 setTimeout(() => {
-                  setExpanded(false)
+                  setExpanded(false);
                 }, 500)
               }
             >
               About
             </Link>
           </Nav.Item>
-          <Nav.Item className='mr-3'>
+          <Nav.Item className="mr-3">
             <Link
-              className='text-white'
-              activeClass='active'
-              to='skills'
+              className="text-white"
+              activeClass="active"
+              to="skills"
               spy={true}
               smooth={true}
               duration={750}
@@ -82,18 +82,18 @@ const NavBar = ({ theme, setTheme }) => {
               // Handle collapse on select
               onClick={() =>
                 setTimeout(() => {
-                  setExpanded(false)
+                  setExpanded(false);
                 }, 500)
               }
             >
               Skills
             </Link>
           </Nav.Item>
-          <Nav.Item className='mr-3'>
+          <Nav.Item className="mr-3">
             <Link
-              className='text-white'
-              activeClass='active'
-              to='projects'
+              className="text-white"
+              activeClass="active"
+              to="projects"
               spy={true}
               smooth={true}
               duration={750}
@@ -101,18 +101,18 @@ const NavBar = ({ theme, setTheme }) => {
               // Handle collapse on select
               onClick={() =>
                 setTimeout(() => {
-                  setExpanded(false)
+                  setExpanded(false);
                 }, 500)
               }
             >
               Projects
             </Link>
           </Nav.Item>
-          <Nav.Item className='mr-3'>
+          <Nav.Item className="mr-3">
             <Link
-              className='text-white'
-              activeClass='active'
-              to='contact'
+              className="text-white"
+              activeClass="active"
+              to="contact"
               spy={true}
               smooth={true}
               duration={750}
@@ -120,7 +120,7 @@ const NavBar = ({ theme, setTheme }) => {
               // Handle collapse on select
               onClick={() =>
                 setTimeout(() => {
-                  setExpanded(false)
+                  setExpanded(false);
                 }, 500)
               }
             >
@@ -128,18 +128,18 @@ const NavBar = ({ theme, setTheme }) => {
             </Link>
           </Nav.Item>
         </Nav>
-        <Form className='d-flex w-100 justify-content-end'>
+        <Form className="d-flex w-100 justify-content-end">
           <Form.Check
-            id='custom-switch'
-            className='text-white'
-            type='switch'
+            id="custom-switch"
+            className="text-white"
+            type="switch"
             label={themeLogo}
             onChange={updateTheme}
           />
         </Form>
       </Navbar.Collapse>
     </Navbar>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

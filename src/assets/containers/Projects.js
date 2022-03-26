@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 // https://react-bootstrap.github.io/components/cards/#card-columns
-import { Card} from "react-bootstrap";
-import CardColumns from "react-bootstrap/col";
+import { CardColumns, Card } from "react-bootstrap";
 import { filteredProjects, projectData } from "../../data";
 import {
   ProjectsError,
@@ -90,7 +89,7 @@ const Projects = ({ theme, githubUsername }) => {
                   <Card.Body>
                     <a
                       href={projects.html_url}
-                      
+                      target="_blank"
                       rel="noreferrer"
                     >
                       <Card.Title className="d-inline-block">
@@ -118,7 +117,7 @@ const Projects = ({ theme, githubUsername }) => {
               <Card key={projects.id}>
                 <Card.Img variant="top" src={defualtImage} />
                 <Card.Body>
-                  <a href={projects.html_url}  rel="noreferrer">
+                  <a href={projects.html_url} target="_blank" rel="noreferrer">
                     <Card.Title className="d-inline-block">
                       {projects.name}
                     </Card.Title>

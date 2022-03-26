@@ -1,4 +1,3 @@
-import React from 'react'
 // https://www.npmjs.com/package/react-scroll
 import { Link } from "react-scroll";
 // https://react-icons.github.io/react-icons/

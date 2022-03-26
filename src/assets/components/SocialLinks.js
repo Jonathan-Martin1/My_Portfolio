@@ -1,6 +1,5 @@
 // https://react-icons.github.io/react-icons/
 import { FaGithub, FaLink, FaTwitter } from "react-icons/fa";
-import React from 'react'
 
 const SocialLinks = ({ githubUrl, link, twitter }) => {
   const twitterLink = `https://twitter.com/${twitter}`;
@@ -9,7 +8,7 @@ const SocialLinks = ({ githubUrl, link, twitter }) => {
     return (
       <>
         <div className="social-links">
-          <a href={githubUrl} rel="noreferrer">
+          <a href={githubUrl} target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
         </div>
@@ -21,11 +20,11 @@ const SocialLinks = ({ githubUrl, link, twitter }) => {
     return (
       <>
         <div className="social-links">
-          <a className="mr-5" href={githubUrl} rel="noreferrer">
+          <a className="mr-5" href={githubUrl} target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
 
-          <a href={link} rel="noreferrer">
+          <a href={link} target="_blank" rel="noreferrer">
             <FaLink />
           </a>
         </div>
@@ -37,11 +36,11 @@ const SocialLinks = ({ githubUrl, link, twitter }) => {
     return (
       <>
         <div className="social-links">
-          <a className="mr-5" href={githubUrl} rel="noreferrer">
+          <a className="mr-5" href={githubUrl} target="_blank" rel="noreferrer">
             <FaGithub />
           </a>
 
-          <a href={twitterLink} rel="noreferrer">
+          <a href={twitterLink} target="_blank" rel="noreferrer">
             <FaTwitter />
           </a>
         </div>
@@ -52,15 +51,15 @@ const SocialLinks = ({ githubUrl, link, twitter }) => {
   return (
     <>
       <div className="social-links">
-        <a href={githubUrl} rel="noreferrer">
+        <a href={githubUrl} target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
 
-        <a className="mx-5" href={link} rel="noreferrer">
+        <a className="mx-5" href={link} target="_blank" rel="noreferrer">
           <FaLink />
         </a>
 
-        <a href={twitterLink} rel="noreferrer">
+        <a href={twitterLink} target="_blank" rel="noreferrer">
           <FaTwitter />
         </a>
       </div>

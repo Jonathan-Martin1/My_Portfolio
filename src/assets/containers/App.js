@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { githubUsername } from "../../data";
 import { AppLoading, AppError } from "../components/appLoadingError";
 import About from "../components/About";
